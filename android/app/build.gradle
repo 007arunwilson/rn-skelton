@@ -131,6 +131,7 @@ android {
         applicationId "com.native_skelton"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60"
         versionCode 1
         versionName "1.0"
     }
@@ -187,9 +188,20 @@ android {
     }
 }
 
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support' && requested.name != 'multidex') {
+            details.useVersion "${rootProject.ext.supportLibVersion}"
+        }
+    }
+}
+
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation "com.facebook.react:react-native:+"
+    implementation project(path: ':react-native-navigation')  // From node_modules
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
@@ -198,6 +210,8 @@ dependencies {
     } else {
       implementation jscFlavor
     }
+    implementation 'com.android.support:design:25.4.0'
+    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
 }
 
 // Run this once to be able to run the application with BUCK
