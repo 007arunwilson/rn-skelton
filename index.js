@@ -7,8 +7,8 @@ Navigation.events().registerAppLaunchedListener(() => {
     Navigation.setRoot({
         root: {
             component: {
-                name: "navigation.playground.WelcomeScreen"
-            }
+                name: "navigation.playground.WelcomeScreen",
+            },
         }
     });
 });

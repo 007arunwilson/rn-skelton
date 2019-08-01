@@ -13,6 +13,7 @@ import com.reactnativenavigation.react.ReactGateway;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
+import io.realm.react.RealmReactPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,6 +40,7 @@ public class MainApplication extends NavigationApplication {
     // Add additional packages you require here
     // No need to add RnnPackage and MainReactPackage
     return Arrays.<ReactPackage>asList(
+            new RealmReactPackage()
             // eg. new VectorIconsPackage()
     );
   }
