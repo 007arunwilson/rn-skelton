@@ -15,8 +15,11 @@ import {
   Text
 } from 'react-native';
 
+// import firebase from 'react-native-firebase';
+
 
 const App = () => {
+
   return (
     <Fragment>
       <StatusBar hidden translucent backgroundColor="#E9E9E9" barStyle="dark-content" />

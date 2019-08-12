@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "592901977102",
+    "firebase_url": "https://nativeskelton.firebaseio.com",
+    "project_id": "nativeskelton",
+    "storage_bucket": "nativeskelton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592901977102:android:38d6af7e2e240653",
+        "android_client_info": {
+          "package_name": "com.native_skelton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592901977102-26rdgrf41egau3lc254fhg2vu0dut3cv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.native_skelton",
+            "certificate_hash": "7389122e3a13e755671b16e51f361e041c8e66a3"
+          }
+        },
+        {
+          "client_id": "592901977102-3d5m7k1s3scedo3v5gso9cga0terkcpt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuyloDj71SvnpO3JfzXnUBAIdHiWBY4-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592901977102-3d5m7k1s3scedo3v5gso9cga0terkcpt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
