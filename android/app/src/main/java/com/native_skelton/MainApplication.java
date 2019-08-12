@@ -16,6 +16,7 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import io.realm.react.RealmReactPackage;
 import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage; // <-- Add this line
 
 
 import java.util.Arrays;
@@ -44,7 +45,9 @@ public class MainApplication extends NavigationApplication {
     // No need to add RnnPackage and MainReactPackage
     return Arrays.<ReactPackage>asList(
             new RealmReactPackage(),
-            new RNFirebasePackage()
+            new RNFirebasePackage(),
+            new RNFirebaseMessagingPackage() // <-- Add this line
+
             // eg. new VectorIconsPackage()
     );
   }
@@ -53,4 +56,12 @@ public class MainApplication extends NavigationApplication {
   public List<ReactPackage> createAdditionalReactPackages() {
     return getPackages();
   }
+
+  @Override
+  public void onCreate() { // <-- Check this block exists
+    super.onCreate();
+    SoLoader.init(this, /* native exopackage */ false); // <-- Check this line exists within the block
+  }
+
+
 }
