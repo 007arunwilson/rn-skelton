@@ -15,32 +15,11 @@ import {
   Text
 } from 'react-native';
 
-
-import firebase from 'react-native-firebase';
+//import firebase from 'react-native-firebase';
 
 
 const App = () => {
 
-  console.log("FCM")
-  console.log("\n\n\n\n\n\n\n ----- Louis ----------- \n\n\n\n\n\n\n\n")
-  console.debug("\n\n\n\n\n\n\n ----- Louis ----------- \n\n\n\n\n\n\n\n");
-
-  firebase.messaging().getToken()
-    .then(fcmToken => {
-      if (fcmToken) {
-
-        console.log("fcmToken success:", fcmToken)
-        // user has a device token
-      } else {
-
-        console.log("fcmToken error: no error");
-        // user doesn't have a device token yet
-      }
-    }).catch(error => {
-
-      console.log("fcmToken error:", error);
-
-    });
 
   return (
     <Fragment>
