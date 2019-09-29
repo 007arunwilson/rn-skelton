@@ -23,7 +23,6 @@ const App = () => {
 
   return (
     <Fragment>
-      <StatusBar hidden translucent backgroundColor="#E9E9E9" barStyle="dark-content" />
       <SafeAreaView style={styles.body}>
         <View >
           <Text >Initiating ... FCM</Text>
